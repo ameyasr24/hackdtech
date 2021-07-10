@@ -1,0 +1,68 @@
+.side-bar {
+    display: grid;
+    padding-top: 10px;
+}
+
+.site-title {
+    position: relative;
+    width: 175px;
+    height: 56px;
+    
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 30px;
+    /* or 83% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    /* Black */
+    
+    color: #000000;
+}
+
+.new-post-button {
+    position: relative;
+
+    width: 231px;
+    height: 42px;
+    margin: 0px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Black */
+
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.sort-by-title {
+    position: relative;
+    margin-top: 20px;
+    width: 144px;
+    height: 27px;
+
+    /* Button Text */
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    /* or 100% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.sort-by-options {
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
