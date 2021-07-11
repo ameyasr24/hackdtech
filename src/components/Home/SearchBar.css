@@ -1,3 +1,23 @@
-.search-bar {
+.home-title {
+    padding: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 30px;
+    
+    display: flex;
+    text-align: center;
+    align-items: right;
+    width: 100%;
+    color: #fca311;
+    background-color: #0F192E;
+}
+
+
+.padding {
     margin: 20px;
 }

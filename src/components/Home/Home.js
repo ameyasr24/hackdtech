@@ -1,12 +1,6 @@
 import React from "react";
-import { alpha, makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import InputBase from '@material-ui/core/InputBase';
-import SearchIcon from '@material-ui/icons/Search';
 import SearchBar from "./SearchBar";
 import Post from "./Post.js";
-import { LocalPostOfficeOutlined } from "@material-ui/icons";
 import "./Home.css";
 
 
