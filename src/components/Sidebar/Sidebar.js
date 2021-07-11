@@ -86,6 +86,8 @@ const Sidebar = props => {
           <img src={logo} className="logo"/>
 
           <StyledButton onClick={routeChangeForm} className="new-post-button" variant="outlined">+ New Post</StyledButton>
+          <div className="hidingBlock"></div>
+          <div className="colorBlock"></div>
         </div>
         <div className="full-site-element body">
             <Switch>
