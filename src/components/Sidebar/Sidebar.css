@@ -10,22 +10,24 @@
     width: min-content;
     min-height: 100vh;
     border-right: 5px solid #0F192E;
+    text-align: center;
 }
 
 .site-title {
+    margin: 10px;
     position: relative;
-    width: 175px;
+    width: 210px;
     height: 56px;
     
     font-family: "Open Sans";
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 58px;
     line-height: 30px;
     
     display: flex;
-    align-items: center;
     text-align: center;
+    align-items: center;
     
     color: #0F192E;
 }
@@ -38,11 +40,24 @@
 .logo {
     width: 150px;
     height: 150px;
+    /*align-items: center;*/
 }
-
-
 
 .body {
     width: auto;
     background-color: #e5e5e5;
 }
+
+.hidingBlock {
+    background-color: #fff;
+    height: 30px;
+}
+
+
+.colorBlock {
+    background-color: #14213D;
+    height: 400px;
+    padding-top: 1500px;
+    width: 100%;
+}
+
