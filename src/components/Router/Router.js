@@ -37,7 +37,7 @@ const Sidebar = props => {
   const allPosts = posts => console.log(posts);
   const [posts, setPosts] = React.useState(EXAMPLE_POSTS);
   const history = useHistory();
-  const allTags = ["anxiety", "depression", "eating disorders", "burnout", "imposter syndrome", "serotonin boosts", "wellness", "testimonials"]
+  const allTags = ["anxiety", "depression", "eating disorders", "burnout", "imposter syndrome", "serotonin boosts", "wellness", "testimonial"]
   const [tags, setTags] = React.useState([])
 
   const addPost = (tags, description, body) => {
