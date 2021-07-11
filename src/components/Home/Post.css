@@ -1,26 +1,66 @@
-.posts {
+.post {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-
-    position: relative;
-    width: 900px;
-    height: 250px;
-
-    /* White */
-    background: #FFFFFF;
-    /* Black */
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 8px;
-
-    margin: 100px 10px 10px 50px;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2rem 0;
+    background-color:#e5e5e5;
+    box-shadow: 8px 10px #fca311;
 }
 
-.cardHeader {
-    font-weight: bold;
-    font-size: 30px;
+.post-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 0rem;
+    background-color: #0F192E;
+    color: #e5e5e5;
+}
+
+.post-body {
+    font-size: 1rem;
+    font-family: "Open Sans";
+    font-weight: 300;
+    color: #0F192E;
+    margin: 0px;
+    padding: 1rem;
+    background-color: #FFF;
+}
 
 
+#tags-post {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem;
+    background-color: #fff;
+    border-bottom: 2px solid #0F192E;
+    margin: 0px;
+}
+
+.tag-post {
+	width: auto;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #0F192E;
+	padding: 0 8px;
+	font-size: 14px;
+	list-style: none;
+	border-radius: 6px;
+	background: #fca311;
+    margin: 0 8px 8px 0;
+}
+
+.tag-label-post {
+    width: auto;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #0F192E;
+	padding: 0 8px;
+	font-size: 17px;
+	list-style: none;
+	border-radius: 6px;
 }

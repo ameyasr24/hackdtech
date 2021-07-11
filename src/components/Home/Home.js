@@ -7,6 +7,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import SearchBar from "./SearchBar";
 import Post from "./Post.js";
 import { LocalPostOfficeOutlined } from "@material-ui/icons";
+import "./Home.css";
 
 
 const Home = props => {
@@ -29,11 +30,11 @@ const Home = props => {
     return (
         <div>
             <SearchBar allTags={props.allTags} tags={props.tags} addTags={props.addTags} removeTags={props.removeTags}/>
-            <ul id="posts">
+            <div className="posts">
                 {filterPosts(props.tags).map((post, index) => (
                     <Post key={index} post={post} />
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
