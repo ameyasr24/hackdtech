@@ -1,6 +1,6 @@
 .tags-input {
 	display: block;
-	align-items: flex-start;
+	align-items: left;
 	flex-wrap: wrap;
 	min-height: 48px;
 	width: auto;

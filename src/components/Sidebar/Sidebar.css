@@ -1,13 +1,12 @@
 .full-site {
     display: flex;
 	flex-direction: row;
-    width: 100%;
-    overflow: hidden;
+    width: 100vh;
 }
 
 .side-bar {
     padding: 10px 30px;
-    background-color: #C4C4C4;
+    background-color: #0F192E;
     width: min-content;
     min-height: 100vh;
 }
@@ -22,37 +21,17 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 30px;
-    /* or 83% */
     
     display: flex;
     align-items: center;
     text-align: center;
     
-    /* Black */
-    color: #000000;
+    color: #fca311;
 }
 
 .site-title:hover {
-    color: #808080;
+    color: #fec872;
     text-decoration: none;
-}
-
-
-.new-post-button {
-    position: relative;
-
-    width: 231px;
-    height: 42px;
-    margin: 0px;
-
-    /* White */
-
-    background: #FFFFFF;
-    /* Black */
-
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 8px;
 }
 
 .sort-by-title {
@@ -73,14 +52,11 @@
     display: flex;
     align-items: center;
 
-    color: #000000;
+    color: #14213D;
 }
 
 .sort-by-options {
     border-radius: 10px;
-    border: 2px solid #000000;
-}
-
-.content {
-    min-height: 100vh;
+    border: 2px solid #14213D;
+    background-color: #19294d;
 }

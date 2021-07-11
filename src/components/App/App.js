@@ -4,6 +4,12 @@ import Form from "../Form/Form";
 import {BrowserRouter} from "react-router-dom";
 import './App.css';
 
+const App = () => {
+  return (
+    <div className="app">
+      <BrowserRouter>
+        <Sidebar />
+
 function App() {
   const allPosts = posts => console.log(posts);
   const posts = [{

@@ -3,21 +3,20 @@ import TextField from '@material-ui/core/TextField';
 import TagsInput from "./TagsInput";
 import React from 'react';
 import "./Form.css";
+import Button from '@material-ui/core/Button';
+import { useHistory } from 'react-router-dom';
+
 
 const Form = props => {
-  const [posts, setPosts] = React.useState(props.posts);
   const [description, setDescription] = React.useState("");
   const [body, setBody] = React.useState("");
   const [tags, setTags] = React.useState(["stress", "anxiety", "depression"]);
 
+  const history = useHistory();
   const handleSubmit = event => {
-    const newPost = {
-      tags: tags,
-      description: description,
-      body: body
-    }
-    setPosts([...posts, newPost]);
-    props.allPosts([...posts, newPost]);
+    props.addPost(tags, description, body);
+    let path = "/";
+    history.push(path);
   };
 
   const handleDescriptionChange = e => {
@@ -44,13 +43,13 @@ const Form = props => {
  
   return (
     <div className="container">
-      <div className="col-xs-12">
+      <div className="form-element">
         <h3>Form</h3>
       </div>
-      <div className="col-xs-12">
+      <div className="form-element">
         <TagsInput tags={tags} addTags={addTags} removeTags={removeTags}/>
       </div>
-      <div className="col-xs-12">
+      <div className="form-element">
           <TextField 
               label="Description"
               fullWidth
@@ -59,19 +58,20 @@ const Form = props => {
               onChange={handleDescriptionChange}
           />
       </div>
-      <div className="col-xs-12">
+      <div className="form-element">
           <TextField 
               label="Body"
               multiline
               fullWidth
-              rows={6}
+              rows={9}
               variant="outlined"
               value={body}
               onChange={handleBodyChange}
           />
       </div>
-      <div className="col-xs-12">
-        <input className="btn btn-primary" type="submit" onClick={handleSubmit}/>
+      <div className="form-element">
+        <Button variant="outlined" onClick={handleSubmit}> Submit 
+        </Button>     
       </div>
       </div>
   );
