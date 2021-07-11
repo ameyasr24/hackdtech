@@ -7,11 +7,14 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Home from "../Home/Home";
 import Form from "../Form/Form";
+import logo from "../../img/logo.png";
 import {
   useHistory,
   Switch,
   Route
 } from "react-router-dom";
+
+import EXAMPLE_POSTS from "./ExamplePosts";
 
 const StyledButton = withStyles({
   root: {
@@ -19,14 +22,14 @@ const StyledButton = withStyles({
     width: "231px",
     height: "42px",
     marginTop: "20px",
-    background: "#19294d",
-    border: "2px solid #fca311",
-    color: "#FFF",
+    background: "#fca311",
+    border: "2px solid #0F192E",
+    color: "#0F192E",
     "box-sizing": "border-box",
     "border-radius": "8px",
     '&:hover': {
-      backgroundColor: "fca311",
-      color: '#FFF'
+      backgroundColor: "#fec872",
+      color: '#0F192E'
     }
   },
 
@@ -35,14 +38,11 @@ const StyledButton = withStyles({
 
 const Sidebar = props => {
   const allPosts = posts => console.log(posts);
-  const [posts, setPosts] = React.useState([{
-    tags: ["stress"],
-    description: "BDC TalkNow",
-    body: "Sometimes, you find yourself having a mental breakdown at 2 AM, and unfortunately you can’t call CAPS at any odd time in the middle of night. I decided to try out the Blue Devils Care TalkNow service - I was shocked to see a few therapists available online so late at night. It honestly was really nice to have someone there to talk through what I was feeling in the moment. If you don’t have an account yet, the ChatBot can help you do that if you say you’re anxious and want to talk to someone. Please don’t feel turned off by the logistics of logging into the system; it’s really worth it in the end."
-  }])
+  const [posts, setPosts] = React.useState(EXAMPLE_POSTS);
   const history = useHistory();
+  const allTags = ["anxiety", "depression", "eating disorders", "burnout", "imposter syndrome", "serotonin boosts", "wellness"]
+  const [tags, setTags] = React.useState([])
 
-  const tags = ["tag"]
   const addPost = (tags, description, body) => {
     const newPost = {
       tags: tags,
@@ -63,38 +63,57 @@ const Sidebar = props => {
     history.push(path);
   }
 
-    return (
-        <div className="full-site">
-          <div className="full-site-element side-bar">
-            <a href="/" onClick={routeChangeHome} className="site-title">site title</a>
-            <StyledButton onClick={routeChangeForm} className="new-post-button" variant="outlined">+ New Post</StyledButton>
-            <p className="sort-by-title">Sort By:</p>
-            <div name="sort-by-options">
-              <RadioGroup aria-label="sort-by" name="sort-by-options">
-                <FormControlLabel value="all-posts" control={<Radio />} label="all posts" />
-                <FormControlLabel value="most recent" control={<Radio />} label="most recent" />
-                <FormControlLabel value="popular all time" control={<Radio />} label="popular all time" />
-                <FormControlLabel value="popular this week" control={<Radio />} label="popular this week" />
-              </RadioGroup>
-            </div>
-          </div>
-          <div className="full-site-element">
-              <Switch>
-                  <Route exact path="/">
-                  <Home posts={posts}/>
-                  </Route>
-                  <Route path="/new-post">
-                    <Form 
-                      allPosts={allPosts} 
-                      posts={posts}
-                      addPost={addPost}
-                    />
-                  </Route>
-              </Switch>
-          </div>
-              
+  const addTags = e => {
+    if (e.key === "Enter" && e.target.value !== "") {
+      if (!tags.includes(e.target.value)) {
+          const newTag = e.target.value;
+          e.target.value = "";
+          setTags([...tags, newTag]);
+      } else {
+          e.target.value = "";
+      }
+    }
+  }
+
+  const removeTags  = index => {
+      setTags([...tags.filter(tag => tags.indexOf(tag) !== index)]);
+  };
+
+  return (
+      <div className="full-site">
+        <div className="full-site-element side-bar">
+          <a href="/" onClick={routeChangeHome} className="site-title">be well.</a>
+          <img src={logo} className="logo"/>
+
+          <StyledButton onClick={routeChangeForm} className="new-post-button" variant="outlined">+ New Post</StyledButton>
         </div>
-    );
+        <div className="full-site-element body">
+            <Switch>
+                <Route exact path="/">
+                <Home 
+                  posts={posts} 
+                  allTags={allTags}
+                  tags={tags}
+                  addTags={addTags}
+                  removeTags={removeTags}
+                />
+                </Route>
+                <Route path="/new-post">
+                  <Form 
+                    allPosts={allPosts} 
+                    posts={posts}
+                    addPost={addPost}
+                    allTags={allTags}
+                    tags={tags}
+                    addTags={addTags}
+                    removeTags={removeTags}
+                  />
+                </Route>
+            </Switch>
+        </div>
+            
+      </div>
+  );
 };
 
 export default Sidebar;

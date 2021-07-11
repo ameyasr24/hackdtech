@@ -10,11 +10,10 @@ import { useHistory } from 'react-router-dom';
 const Form = props => {
   const [description, setDescription] = React.useState("");
   const [body, setBody] = React.useState("");
-  const [tags, setTags] = React.useState(["stress", "anxiety", "depression"]);
 
   const history = useHistory();
   const handleSubmit = event => {
-    props.addPost(tags, description, body);
+    props.addPost(props.tags, description, body);
     let path = "/";
     history.push(path);
   };
@@ -26,28 +25,14 @@ const Form = props => {
   const handleBodyChange = e => {
     setBody(e.target.value);
   }
-
-  const addTags = e => {
-    if (e.key === "Enter" && e.target.value !== "") {
-      if (!tags.includes(e.target.value)) {
-          setTags([...tags, e.target.value]);
-          e.target.value = "";
-      } else {
-          e.target.value = "";
-      }
-    }
-  }
-  const removeTags  = index => {
-    setTags([...tags.filter(tag => tags.indexOf(tag) !== index)]);
-  };
  
   return (
     <div className="container">
-      <div className="form-element">
-        <h3>Form</h3>
+      <div className="form-element form-title-container">
+        <h3 className="form-title">Submit a post!</h3>
       </div>
       <div className="form-element">
-        <TagsInput tags={tags} addTags={addTags} removeTags={removeTags}/>
+        <TagsInput tags={props.tags} addTags={props.addTags} removeTags={props.removeTags}/>
       </div>
       <div className="form-element">
           <TextField 

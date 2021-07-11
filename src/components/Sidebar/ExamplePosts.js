@@ -1,0 +1,25 @@
+const EXAMPLE_POSTS = [
+
+    {
+      tags:["testimonial", "advice", "stress"],
+      description: "A guide to using Blue Devils Care and my experiences",
+      body:"I’m sure you’ve heard “If you need help, go to CAPS” from literally everyone and your mom by now. For me, despite everyone at Duke’s openness to recommend counseling, the thought of calling CAPS seemed really daunting. None of my friends had ever done it and I honestly didn’t know where to start. All I knew was that I wasn’t feeling good and that feeling that way all the time wasn’t good for me. The lists of resources were really overwhelming and I found myself hanging up the phone every time I tried to call CAPS.\n\nI stumbled across Blue Devils Care and their telehealth program this past semester and decided to make an appointment through the scheduled counseling program. I’m not going to lie; even just doing that was really stressful. Making an account was pretty straightforward (the ChatBot on this forum can probably help you do that :) Just tell it that you’re stressed). Making an appointment was a little harder, as they do ask you a few questions about why you want to schedule counseling. Don’t be too worried, you don’t need to be super specific. You really can just say “I haven’t been feeling so well recently and I’m really anxious about school.\n\nI continued scheduling follow up appointments with the same therapist and I found it really helpful to talk to her regularly. You get 12 free appointments through Blue Devils Care. I’m not exaggerating when I say this completely changed the trajectory of my semester and I am so glad I did it. Please don’t be scared to try it out."
+    },
+    {
+        tags: ["testimonial", "anxiety", "depression"],
+        description: "Sometimes finding help is more complicated than a therapy session",
+        body: "During my sophomore year, I was feeling constantly anxious and felt really paralyzed for months. Some days, I couldn’t even get out of bed or make it to my classes. In the midst of one breakdown, I tried making an account on Blue Devils Care and using their TalkNow service. One of my friends had used it a few times and I thought it might help.\n\nTo be completely blunt, the entire experience sucked. TalkNow is really just for on-demand, on-off care. There wasn’t nearly enough time to explain everything that had been happening in my life and I just felt like the counselor didn’t really understand what I was feeling. \n\nI was really discouraged after that experience, but one day I just bit the bullet and called CAPS. They’re only open on weekdays from 10AM - 3PM, so you might have to plan around your classes to find a time to call. I got a consultation and it turns out that I needed more long term care, which explains why TalkNow didn’t work for me. They referred me to a psychiatrist who was able to provide me with a formal diagnosis and prescribe medication. Things got a lot better after that."
+    },
+    {
+        tags: ["testimonial", "imposter syndrome", "stress"],
+        description: "Feeling Imposter Syndrome and using DukeLine",
+        body: "I had always heard about imposter syndrome before coming to college, but didn’t realize the extent to which it would affect me at Duke. During my first semester at Duke, I started to notice that while Duke wasn’t necessarily known to be a competitive environment, everyone around me was so accomplished -- it was common to come across valedictorians, athletes, entrepreneurs, app developers among my peers. As classes ramped up -- and they were tough -- I found myself increasingly feeling stressed, inadequate and doubtful. Frankly, coming from high school where I could handle everything --  be the top of my class, captain my basketball team, and lead of multiple service clubs -- to college where I was struggling to be able to handle just my mere courseload, I didn’t feel like I deserved to be at Duke. I came across DukeLine on my instagram page, and I decided to text the number. It was a little awkward at first, knowing that the person on the other side could be someone I knew, but the response I got was so warm, understanding, and welcoming. They made me feel like I wasn’t alone, and also helped me realize my own worth -- and why I deserve to be at Duke."
+    },
+    {
+        tags: ["testimonial", "stress", "wellness"],
+        description: "The Wellness Center changed my life",
+        body: "A year ago I went to CAPS due to stress and began taking prescribed medication to help me sleep at night. I don't like taking medication so I wanted to find other ways to manage my life. I completed two Koru classes, began meditating on a daily basis and enrolled in a Tai Chi class at Wilson. I am no longer taking sleep aids. This has been my best semester at Duke. I basically changed my whole lifestyle. It is not about how much stress I have in my life because now I know how to manage my stress.\n\nSource: https://studentaffairs.duke.edu/duwell/wellness-activities/koru (need a source for this bc we stole it from the website)"
+    }
+]
+
+export default EXAMPLE_POSTS;

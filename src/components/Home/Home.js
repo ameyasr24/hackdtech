@@ -10,31 +10,31 @@ import { LocalPostOfficeOutlined } from "@material-ui/icons";
 
 
 const Home = props => {
-    const [tags, setTags] = React.useState(["stress", "anxiety", "depression"]);
 
-    const addTags = e => {
-        if (e.key === "Enter" && e.target.value !== "") {
-          if (!tags.includes(e.target.value)) {
-              const newTag = e.target.value;
-              e.target.value = "";
-              setTags([...tags, newTag]);
-          } else {
-              e.target.value = "";
-          }
+    const filterPosts = (tags) => {
+        let filteredPosts = [];
+        if (tags.length==0) {
+            return props.posts;
         }
+        props.posts.filter((post) =>{
+            for (let i=0; i<tags.length; i++) {
+                if (post.tags.includes(tags[i])) {
+                    filteredPosts.push(post);
+                    break;
+                }
+            }
+        })
+        return filteredPosts;
     }
-    const removeTags  = index => {
-        setTags([...tags.filter(tag => tags.indexOf(tag) !== index)]);
-    };
-
     return (
         <div>
-            <SearchBar tags={tags} addTags={addTags} removeTags={removeTags}/>
+            <SearchBar allTags={props.allTags} tags={props.tags} addTags={props.addTags} removeTags={props.removeTags}/>
             <ul id="posts">
-                {props.posts.map((post, index) => (
+                {filterPosts(props.tags).map((post, index) => (
                     <Post key={index} post={post} />
                 ))}
             </ul>
         </div>
     );
+};
 export default Home;

@@ -6,9 +6,10 @@
 
 .side-bar {
     padding: 10px 30px;
-    background-color: #0F192E;
+    background-color: #fff;
     width: min-content;
     min-height: 100vh;
+    border-right: 5px solid #0F192E;
 }
 
 .site-title {
@@ -26,37 +27,22 @@
     align-items: center;
     text-align: center;
     
-    color: #fca311;
+    color: #0F192E;
 }
 
 .site-title:hover {
-    color: #fec872;
+    color: #233A6C;
     text-decoration: none;
 }
 
-.sort-by-title {
-    position: relative;
-    margin-top: 20px;
-    width: 144px;
-    height: 27px;
-
-    /* Button Text */
-
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 16px;
-    /* or 100% */
-
-    display: flex;
-    align-items: center;
-
-    color: #14213D;
+.logo {
+    width: 150px;
+    height: 150px;
 }
 
-.sort-by-options {
-    border-radius: 10px;
-    border: 2px solid #14213D;
-    background-color: #19294d;
+
+
+.body {
+    width: auto;
+    background-color: #e5e5e5;
 }
