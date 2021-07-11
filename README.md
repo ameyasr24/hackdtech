@@ -1,4 +1,4 @@
-# Be Well.
+# Be Well. Mental Health for Students, by Students
 
 A community for Duke Students to easily seek out mental health resources and lean on their peers for support.
 
