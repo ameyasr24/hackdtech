@@ -24,7 +24,7 @@ const TagsInput = props => {
                 selectOnFocus
                 clearOnBlur
                 handleHomeEndKeys
-                style={{ width: "60%" }}
+                style={{ width: "100%" }}
                 freeSolo
                 renderInput={(params) => 
                     <TextField {...params} 

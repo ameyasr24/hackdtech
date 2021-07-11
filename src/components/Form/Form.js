@@ -44,35 +44,36 @@ const Form = props => {
  
   return (
     <div className="container">
-      <div className="col-sm-12">
+      <div className="col-xs-12">
         <h3>Form</h3>
-      </div >
-
-      <div className="col-sm-12">
-          <TagsInput tags={tags} addTags={addTags} removeTags={removeTags}/>
-          <div className="form-group">
-            <TextField 
-                label="Description"
-                fullWidth
-                variant="outlined"
-                value={description}
-                onChange={handleDescriptionChange}
-            />
-            <TextField 
-                label="Body"
-                multiline
-                fullWidth
-                rows={6}
-                variant="outlined"
-                value={body}
-                onChange={handleBodyChange}
-            />
-          </div>
-          <div className="form-group">
-            <input className="btn btn-primary" type="submit" onClick={handleSubmit}/>
-          </div>
       </div>
-    </div>
+      <div className="col-xs-12">
+        <TagsInput tags={tags} addTags={addTags} removeTags={removeTags}/>
+      </div>
+      <div className="col-xs-12">
+          <TextField 
+              label="Description"
+              fullWidth
+              variant="outlined"
+              value={description}
+              onChange={handleDescriptionChange}
+          />
+      </div>
+      <div className="col-xs-12">
+          <TextField 
+              label="Body"
+              multiline
+              fullWidth
+              rows={6}
+              variant="outlined"
+              value={body}
+              onChange={handleBodyChange}
+          />
+      </div>
+      <div className="col-xs-12">
+        <input className="btn btn-primary" type="submit" onClick={handleSubmit}/>
+      </div>
+      </div>
   );
 }
  

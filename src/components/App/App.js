@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Form from "../Form/Form";
+import {BrowserRouter} from "react-router-dom";
 import './App.css';
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar />
-      <Form allPosts={allPosts} posts={posts} /> 
+      <BrowserRouter>
+        <Sidebar allPosts={allPosts} posts={posts}/>
+      </BrowserRouter>
     </div>
   );
 }

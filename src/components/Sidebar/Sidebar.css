@@ -1,5 +1,15 @@
+.full-site {
+    display: flex;
+	flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
 .side-bar {
-    padding-top: 10px;
+    padding: 10px 30px;
+    background-color: #C4C4C4;
+    width: min-content;
+    min-height: 100vh;
 }
 
 .site-title {
@@ -19,9 +29,14 @@
     text-align: center;
     
     /* Black */
-    
     color: #000000;
 }
+
+.site-title:hover {
+    color: #808080;
+    text-decoration: none;
+}
+
 
 .new-post-button {
     position: relative;
@@ -64,4 +79,8 @@
 .sort-by-options {
     border-radius: 10px;
     border: 2px solid #000000;
+}
+
+.content {
+    min-height: 100vh;
 }
