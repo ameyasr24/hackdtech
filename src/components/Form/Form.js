@@ -5,8 +5,26 @@ import React from 'react';
 import "./Form.css";
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
+
+const StyledButton = withStyles({
+  root: {
+    position: "relative",
+    width: "200px",
+    height: "42px",
+    background: "#fff",
+    border: "2px solid #0F192E",
+    color: "#000",
+    "box-sizing": "border-box",
+    "border-radius": "8px",
+    '&:hover': {
+      backgroundColor: "#fec872",
+      color: '#0F192E'
+    }
+  },
+
+})(Button);
 
 const Form = props => {
   const [description, setDescription] = React.useState("");
@@ -28,12 +46,11 @@ const Form = props => {
   }
  
   return (
-    <div className="container">
-      <div className="form-element form-title-container">
-        <h3 className="form-title">Submit a post!</h3>
-      </div>
+    <div>
+      <h1 className="form-title">{">"} submit a post</h1>
+      <div className="form">
       <div className="form-element">
-        <TagsInput tags={props.tags} addTags={props.addTags} removeTags={props.removeTags}/>
+        <TagsInput allTags={props.allTags} tags={props.tags} addTags={props.addTags} removeTags={props.removeTags}/>
       </div>
       <div className="form-element">
           <TextField 
@@ -56,10 +73,10 @@ const Form = props => {
           />
       </div>
       <div className="form-element">
-        <Button variant="outlined" onClick={handleSubmit}> Submit 
-        </Button>     
+        <StyledButton variant="outlined" onClick={handleSubmit}>submit</StyledButton>
       </div>
-      </div>
+    </div>
+  </div>
   );
 }
  

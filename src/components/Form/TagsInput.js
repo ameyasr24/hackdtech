@@ -20,12 +20,12 @@ const TagsInput = props => {
                 ))}
             </ul>
             <Autocomplete 
-                options={props.tags}
+                options={props.allTags}
                 selectOnFocus
                 clearOnBlur
                 handleHomeEndKeys
-                style={{ width: "100%" }}
                 freeSolo
+                fullWidth
                 renderInput={(params) => 
                     <TextField {...params} 
                         label="Press enter to add tags" 

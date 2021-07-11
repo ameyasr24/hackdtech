@@ -8,7 +8,7 @@ const SearchBar = props => {
 
     return (
         <div className="search-bar">
-            <h1 className="home-title">forum posts</h1>
+            <h1 className="home-title"> {">"} forum posts</h1>
             <div className="tags-input padding"> 
                 <Autocomplete 
                     options={props.allTags}
