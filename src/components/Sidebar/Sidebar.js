@@ -2,9 +2,6 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import "./Sidebar.css";
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Home from "../Home/Home";
 import Form from "../Form/Form";
 import logo from "../../img/logo.png";
@@ -81,13 +78,15 @@ const Sidebar = props => {
 
   return (
       <div className="full-site">
-        <div className="full-site-element side-bar">
+        <div className="full-site-element">
+        <div className="side-bar">
           <a href="/" onClick={routeChangeHome} className="site-title">be well.</a>
           <img src={logo} className="logo"/>
 
           <StyledButton onClick={routeChangeForm} className="new-post-button" variant="outlined">+ New Post</StyledButton>
           <div className="hidingBlock"></div>
           <div className="colorBlock"></div>
+        </div>
         </div>
         <div className="full-site-element body">
             <Switch>

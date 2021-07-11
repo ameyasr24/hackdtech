@@ -16,9 +16,6 @@ const SearchBar = props => {
                     clearOnBlur
                     handleHomeEndKeys
                     fullWidth
-                    style={{ 
-                        width: "100vh",
-                    }}
                     renderInput={(params) => 
                         <TextField {...params} 
                             label="Press enter to filter tags" 
