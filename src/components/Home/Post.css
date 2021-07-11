@@ -5,7 +5,8 @@
     width: 80%;
     margin: 2rem 0;
     background-color:#e5e5e5;
-    box-shadow: 8px 10px #fca311;
+    border-radius: 6px;
+    box-shadow: 8px 10px hsl(37, 98%, 53%);
 }
 
 .post-title {
@@ -14,7 +15,9 @@
     padding: 1rem;
     margin-bottom: 0rem;
     background-color: #0F192E;
-    color: #e5e5e5;
+    color: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .post-body {
@@ -24,7 +27,9 @@
     color: #0F192E;
     margin: 0px;
     padding: 1rem;
-    background-color: #FFF;
+    background-color: #e5e5e5;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 
@@ -32,7 +37,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding: 1rem;
-    background-color: #fff;
+    background-color: #e5e5e5;
     border-bottom: 2px solid #0F192E;
     margin: 0px;
 }

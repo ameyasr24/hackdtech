@@ -13,6 +13,10 @@
     width: 80%;
 }
 
+.background {
+    background-color: #efefef;
+    border-radius: 5px;
+}
 .form-title {
     padding: 30px;
     margin: 0px;

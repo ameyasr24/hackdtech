@@ -29,7 +29,7 @@ const TagsInput = props => {
                 renderInput={(params) => 
                     <TextField {...params} 
                         label="Press enter to add tags" 
-                        variant="filled" 
+                        variant="standard" 
                         fullWidth
                         onKeyUp={event => props.addTags(event)}
                     />

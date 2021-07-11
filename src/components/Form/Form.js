@@ -49,10 +49,10 @@ const Form = props => {
     <div>
       <h1 className="form-title">{">"} submit a post</h1>
       <div className="form">
-      <div className="form-element">
+      <div className="form-element background">
         <TagsInput allTags={props.allTags} tags={props.tags} addTags={props.addTags} removeTags={props.removeTags}/>
       </div>
-      <div className="form-element">
+      <div className="form-element background">
           <TextField 
               label="Description"
               fullWidth
@@ -61,7 +61,7 @@ const Form = props => {
               onChange={handleDescriptionChange}
           />
       </div>
-      <div className="form-element">
+      <div className="form-element background">
           <TextField 
               label="Body"
               multiline

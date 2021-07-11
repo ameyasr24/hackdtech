@@ -9,18 +9,16 @@ const SearchBar = props => {
     return (
         <div className="search-bar">
             <h1 className="home-title"> {">"} forum posts</h1>
-            <div className="tags-input padding"> 
+            <div className="tags-input-bar padding border"> 
                 <Autocomplete 
                     options={props.allTags}
                     selectOnFocus
                     clearOnBlur
                     handleHomeEndKeys
-                    fullWidth
                     renderInput={(params) => 
                         <TextField {...params} 
                             label="Press enter to filter tags" 
                             variant="standard" 
-                            fullWidth
                             onKeyUp={event => props.addTags(event)}
                         />
                     }
