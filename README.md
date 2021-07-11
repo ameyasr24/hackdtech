@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Be Well.
+
+A community for Duke Students to easily seek out mental health resources and lean on their peers for support.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
