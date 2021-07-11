@@ -7,7 +7,6 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Home from "../Home/Home";
 import Form from "../Form/Form";
-import Post from "../Home/Post";
 import {
   useHistory,
   Switch,

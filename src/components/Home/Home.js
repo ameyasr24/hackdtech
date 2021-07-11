@@ -37,6 +37,4 @@ const Home = props => {
             </ul>
         </div>
     );
-}
-
 export default Home;

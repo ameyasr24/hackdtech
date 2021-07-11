@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 
 
-
 const Form = props => {
   const [description, setDescription] = React.useState("");
   const [body, setBody] = React.useState("");
@@ -31,9 +30,8 @@ const Form = props => {
   const addTags = e => {
     if (e.key === "Enter" && e.target.value !== "") {
       if (!tags.includes(e.target.value)) {
-          const newTag = e.target.value;
+          setTags([...tags, e.target.value]);
           e.target.value = "";
-          setTags([...tags, newTag]);
       } else {
           e.target.value = "";
       }
@@ -73,7 +71,7 @@ const Form = props => {
       </div>
       <div className="form-element">
         <Button variant="outlined" onClick={handleSubmit}> Submit 
-        </Button>
+        </Button>     
       </div>
       </div>
   );
