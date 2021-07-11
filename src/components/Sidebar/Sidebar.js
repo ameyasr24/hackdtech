@@ -33,7 +33,7 @@ const Sidebar = props => {
     return (
         <div className="full-site">
           <div className="side-bar">
-            <a href="/" className="site-title">site title</a>
+            <a href="/" className="site-title">be well.</a>
             <StyledButton href="/new-post" className="new-post-button" variant="outlined">+ New Post</StyledButton>
             <p className="sort-by-title">Sort by:</p>
             <div name="sort-by-options">
@@ -48,7 +48,7 @@ const Sidebar = props => {
           <div className="content">
             <Switch>
                 <Route exact path="/">
-                <Home />
+                <Home posts={props.posts}/>
                 </Route>
                 <Route path="/new-post">
                   <Form allPosts={props.allPosts} posts={props.posts}/>
