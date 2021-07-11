@@ -18,7 +18,7 @@ const EXAMPLE_POSTS = [
     {
         tags: ["testimonial", "stress", "wellness"],
         description: "The Wellness Center changed my life",
-        body: "A year ago I went to CAPS due to stress and began taking prescribed medication to help me sleep at night. I don't like taking medication so I wanted to find other ways to manage my life. I completed two Koru classes, began meditating on a daily basis and enrolled in a Tai Chi class at Wilson. I am no longer taking sleep aids. This has been my best semester at Duke. I basically changed my whole lifestyle. It is not about how much stress I have in my life because now I know how to manage my stress.\n\nSource: https://studentaffairs.duke.edu/duwell/wellness-activities/koru (need a source for this bc we stole it from the website)"
+        body: "A year ago I went to CAPS due to stress and began taking prescribed medication to help me sleep at night. I don't like taking medication so I wanted to find other ways to manage my life. I completed two Koru classes, began meditating on a daily basis and enrolled in a Tai Chi class at Wilson. I am no longer taking sleep aids. This has been my best semester at Duke. I basically changed my whole lifestyle. It is not about how much stress I have in my life because now I know how to manage my stress."
     }
 ]
 
